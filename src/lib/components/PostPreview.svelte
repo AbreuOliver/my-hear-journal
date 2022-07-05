@@ -6,15 +6,15 @@
   export let small = false
 </script>
 
-<div class="flex flex-col">
+<div class="flex flex-col preview">
   <div>
     {#if !small}
       <h1 class="!mt-0 !mb-2">
-        <a href={`/posts/${post.slug}`}>{post.title}</a>
+        <a  href={`/posts/${post.slug}`}>{post.title}</a>
       </h1>
     {:else}
       <h3 class="!mt-0 !mb-2">
-        <a href={`/posts/${post.slug}`}>{post.title}</a>
+        <a style="font-weight:700 !important" href={`/posts/${post.slug}`}>{post.title}</a>
       </h3>
     {/if}
     <div class="opacity-70">
