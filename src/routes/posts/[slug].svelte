@@ -81,7 +81,7 @@
 
 <article class="relative">
   <h1 class="!mt-0 !mb-2">
-    <a class="!font-medium" href={$page.url.pathname}>
+    <a class="!font-bold" href={$page.url.pathname}>
       {title}
     </a>
   </h1>
