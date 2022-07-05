@@ -65,8 +65,7 @@ module.exports = {
           lg: {
             css: {
               h1: {
-                fontSize: theme('fontSize.4xl')[0],
- fontWeight: bold
+                fontSize: theme('fontSize.4xl')[0]
               }
             }
           },
