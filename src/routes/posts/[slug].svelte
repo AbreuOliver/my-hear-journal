@@ -148,7 +148,7 @@
   }
 
   .post-preview-label {
-    @apply mb-2 text-slate-500 uppercase text-base font-medium;
+    @apply mb-2 text-slate-500 uppercase text-base font-bold;
   }
 
   :global(.dark) .post-preview {
