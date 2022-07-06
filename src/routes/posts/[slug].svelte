@@ -81,7 +81,7 @@
 
 <article class="relative">
   <h1 class="!mt-0 !mb-2">
-    <a class="!font-bold" href={$page.url.pathname}>
+    <a class="!font-bold !text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-teal-500 dark:from-violet-500 dark:to-pink-500" href={$page.url.pathname}>
       {title}
     </a>
   </h1>
