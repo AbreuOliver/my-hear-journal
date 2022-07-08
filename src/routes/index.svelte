@@ -40,7 +40,7 @@
       View on GitHub
       <slot slot="icon-end" />
     </ButtonLink> -->
-    <h1 class="pt-5"><span class="!text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-teal-500 dark:from-violet-500 dark:to-pink-500">Study</span> to show thyself approved unto God</h1>
+    <h1 class="pt-6"><span class="!text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-teal-500 dark:from-violet-500 dark:to-pink-500">Study</span> to show thyself approved unto God</h1>
   </div>
 
   <!-- recent posts -->
