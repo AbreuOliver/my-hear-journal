@@ -36,5 +36,9 @@ svg {
   @apply outline-none focus:outline-none;
 }
 
+html {
+  overflow-x: hidden;
+}
+
 @tailwind components;
 @tailwind utilities;
