@@ -1,1 +1,1 @@
-<span class="!text-transparent bg-clip-text bg-gradient-to-r from-yellow-500 to-red-500 dark:from-green-500 dark:to-grey-500"><slot></slot></span>
+<span class="!text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-teal-500 dark:from-violet-500 dark:to-pink-500"><slot></slot></span>
