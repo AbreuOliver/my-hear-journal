@@ -10,4 +10,4 @@ export const name = `Oliver's Bible Study Journal` // replace with your name
 /**
  * Used for SEO in /posts/[slug]
  */
-export const website = 'https://yourdomain.com'
+export const website = 'https://oliverbiblejournal.vercel.app'
