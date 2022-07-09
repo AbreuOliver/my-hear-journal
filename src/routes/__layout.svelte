@@ -55,7 +55,7 @@
 <style>
   @media only screen and (max-device-width: 768px) and (orientation: portrait)  {
     .nav {
-      background-color: black;
+      background-color: #FFE548;
     }
   }
 </style>
