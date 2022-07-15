@@ -42,14 +42,14 @@
 <div class="flex flex-col flex-grow">
   <!-- replace with a bio about you, or something -->
   <div class="flex flex-col items-start justify-start text-xl h-full">
-    <h1 class="pt-6">
+    <h1 class="pt-6" style="margin-bottom: 0 !important">
       <span
         class="!text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-teal-500 dark:from-violet-500 dark:to-pink-500"
         >Study</span
       > to show thyself approved unto God
     </h1>
-    <h4 style="color: darkgray">
-      Observations and study notes from the F260 Bible reading plan. <br />
+    <h4 style="color: #485163; margin-bottom: 1.75rem">
+      Observations and study notes from the F260 Bible reading plan. <br /><br />
       <strong>Current Reading Status:</strong> <br />
       {readingStatus} plan for
       <strong
@@ -59,7 +59,6 @@
         ></strong
       >.
     </h4>
-    <br />
     <ButtonLink
       size="large"
       target="_blank"
