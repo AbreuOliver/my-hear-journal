@@ -87,7 +87,7 @@
   </h1>
   <div class="opacity-70">
     <time datetime={new Date(parseISO(date)).toISOString()}
-      >{format(new Date(parseISO(date)), 'MMMM d, yyyy')}</time
+      >{format(new Date(parseISO(date)), 'MMMM dd, yyyy')}</time
     >
     •
     <span>{readingTime}</span>
