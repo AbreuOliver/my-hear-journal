@@ -5,12 +5,22 @@
 </script>
 
 <div>
-    <h2 id="explanation"><a href="#explanation"><strong>Explanation</strong></a></h2>
-        <h3>Passage Context</h3>
-            <!-- <blockquote style="font-weight: bold !important"> -->
-                <p>{passageContext}</p>
-            <!-- </blockquote> -->
-        <h3>Passage Key Terms</h3>
+    <h2 id="explanation">
+        <a href="#explanation">
+            <strong>Explanation</strong>
+        </a>
+    </h2>
+        <h3 id="passageContext">
+            <a href="#passageContext">
+                <strong>Passage Context</strong>
+            </a>
+        </h3>
+            <p>{passageContext}</p>
+        <h3 id="passageKeyTerms">
+            <a href="#passageKeyTerms">
+                <strong>Passage Key Terms</strong>
+            </a>
+        </h3>
             <p><slot></slot></p>
         <h3>My Summary of Highlight<h3>
         <p>{mySummary}</p>
