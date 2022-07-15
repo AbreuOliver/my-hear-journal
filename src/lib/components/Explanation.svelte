@@ -18,7 +18,7 @@
         </a>
     </h3>
         <blockquote>
-            <p>"{passageContext}"</p>
+            <p>{passageContext}</p>
             {#if citationURL}
             <a href="{citationURL}">{citation}</a>
             {/if}
