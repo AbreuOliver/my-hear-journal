@@ -22,7 +22,7 @@
             
         </blockquote>
         {#if citationURL != " "}
-        <a href="{citationURL}"> - {citation}</a>
+        <a href="{citationURL}">{citation}</a>
         {/if}
         <!-- {#if citationURL == " "}
         {/if} -->
