@@ -1,5 +1,5 @@
 <script>
-    let text = '';
+    export let text = '';
 </script>
 
 <p>{text}</p>
