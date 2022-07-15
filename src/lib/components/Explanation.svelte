@@ -7,10 +7,11 @@
 <div>
     <h2>Explanation</h2>
         <h3>Context of Passage</h3>
-            <blockquote style="font-weight: bold !important">   {passageContext}
+            <blockquote style="font-weight: bold !important">
+                <p>{passageContext}</p>
             </blockquote>
         <h3>Key Word(s) of Passage<h3>
-            <slot></slot>
+            <p><slot></slot></p>
         <h3>My Summary of Highlight<h3>
             <p>{mySummary}</p>
 </div>
