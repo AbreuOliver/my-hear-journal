@@ -15,5 +15,6 @@
 
     <blockquote style="font-weight: bold !important"> 
     <Gradient>"{verseText}"</Gradient>
-    </blockquote> - {reference}
+     - <p style="font-weight: 600;">{reference}</p>
+    </blockquote>
 </div>

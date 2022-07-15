@@ -2,6 +2,8 @@
 	import Gradient from './Gradient.svelte';
     export let passageContext = '';
     export let mySummary = '';
+    export let citation = '';
+    export let citationURL = '';
 </script>
 
 <div>
@@ -15,7 +17,12 @@
             <strong>Passage Context</strong>
         </a>
     </h3>
-        <p>{passageContext}</p>
+        <blockquote>
+            <p>"{passageContext}"</p>
+            {#if citationURL}
+            <a href="{citationURL}">{citation}</a>
+            {/if}
+        </blockquote>
     <h3 id="passageKeyTerms">
         <a href="#passageKeyTerms">
             <strong>Passage Key Terms</strong>
