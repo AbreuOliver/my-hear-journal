@@ -11,7 +11,7 @@
 </script>
 
 <div class="flex flex-col min-h-screen">
-  <div class="mx-auto flex flex-col flex-grow w-full max-w-4xl" style="color: white">
+  <div class="mx-auto flex flex-col flex-grow w-full max-w-4xl" style="color: white; max-width: 60ch">
       <div class="nav flex h-18 px-5 py-4 justify-between items-center">
         <h2 style="color: #677489">
           <a class="text-lg sm:text-2xl font-bold" href="/">
