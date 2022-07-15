@@ -5,7 +5,7 @@
 </script>
 
 <div>
-    <h2>Explanation</h2>
+    <h2 id="explanation"><a href="#explanation"><strong>Explanation</strong></a></h2>
         <h3>Passage Context</h3>
             <!-- <blockquote style="font-weight: bold !important"> -->
                 <p>{passageContext}</p>
