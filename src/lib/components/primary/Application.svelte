@@ -1,5 +1,4 @@
 <script>
-	import Gradient from './Gradient.svelte';
     export let historicalApplication = '';
     export let contemporaryApplication = '';
 </script>
