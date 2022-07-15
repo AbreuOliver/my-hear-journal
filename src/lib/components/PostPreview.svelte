@@ -10,7 +10,7 @@
   <div>
     {#if !small}
       <h1 class="!mt-0 !mb-2">
-        <a  href={`/posts/${post.slug}`}>{post.title}</a>
+        <a style="font-weight: 800" class="!text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-teal-500 dark:from-violet-500 dark:to-pink-500" href={`/posts/${post.slug}`}>{post.title}</a>
       </h1>
     {:else}
       <h3 class="!mt-0 !mb-2">
