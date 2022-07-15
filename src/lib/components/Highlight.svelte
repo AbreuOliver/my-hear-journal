@@ -5,7 +5,7 @@
 </script>
 
 <div>
-    <h2 id="highlight"><a href="highlight"<strong>Highlight</a></strong></h2>
+    <h2 id="highlight"><a href="highlight"><strong>Highlight</a></strong></h2>
 
     <blockquote style="font-weight: bold !important"> 
     <Gradient>"{verseText}"</Gradient>
