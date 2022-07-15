@@ -1,6 +1,6 @@
 <script>
 	import Gradient from './Gradient.svelte';
-    export let passage = '';
+    export let verseText = '';
     export let reference = '';
 </script>
 
@@ -8,6 +8,6 @@
     <h2>Highlight</h2>
 
     <blockquote style="font-weight: bold !important"> 
-    <Gradient>"{passage}"</Gradient>
+    <Gradient>"{verseText}"</Gradient>
     </blockquote> - {reference}
 </div>
