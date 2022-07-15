@@ -19,10 +19,11 @@
     </h3>
         <blockquote>
             <p>{passageContext}</p>
-            {#if citationURL}
-            <a href="{citationURL}">{citation}</a>
-            {/if}
+            
         </blockquote>
+        {#if !citationURL = ""}
+        <a href="{citationURL}">{citation}</a>
+        {/if}
     <h3 id="passageKeyTerms">
         <a href="#passageKeyTerms">
             <strong>Passage Key Terms</strong>
