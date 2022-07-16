@@ -29,7 +29,7 @@
   if (dayOfWeekName == 'Saturday') {
     currentReadingWeek = result;
   } else {
-    currentReadingWeek = `${result - 1}`;
+    currentReadingWeek = result-1;
   }
 
   console.log("Week Number:", `${result - 1}`);
