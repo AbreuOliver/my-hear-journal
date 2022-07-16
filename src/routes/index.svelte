@@ -27,7 +27,7 @@
   }
   let currentReadingWeek = ''
   if (dayOfWeekName == 'Saturday') {
-    currentReadingWeek = {result};
+    currentReadingWeek = result;
   } else {
     currentReadingWeek = `${result - 1}`;
   }
