@@ -59,7 +59,7 @@
       > to show thyself approved unto God.
     </h1>
     <h4 style="color: #485163; margin-bottom: 1.75rem">
-      Observations and study notes from the F260 Bible reading plan using the <a style="text-decoration: overline" target="_blank" href="https://replicate.org/what-is-a-hear-journal/">H.E.A.R. journaling method</a>.<br /><br />
+      Observations and study notes from the F260 Bible reading plan using the <a style="text-decoration: underline" target="_blank" href="https://replicate.org/what-is-a-hear-journal/">H.E.A.R. journaling method</a>.<br /><br />
       <strong>Current Reading Status:</strong> <br />
       {readingStatus} plan for
       <strong
