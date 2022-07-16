@@ -22,6 +22,8 @@
   let readingStatus = ''
   if (dayOfWeekName == 'Friday') {
     readingStatus = 'Finished reading '
+  } if (dayOfWeekName == 'Saturday') {
+    readingStatus = 'Started reading '
   } else {
     readingStatus = 'Currently reading '
   }
@@ -65,7 +67,7 @@
       <strong
         ><span
           class="!text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-teal-500 dark:from-violet-500 dark:to-pink-500"
-          >Week {result - 1}</span
+          >Week {currentReadingWeek}</span
         ></strong
       >.
     </h4>
