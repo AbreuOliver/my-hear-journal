@@ -46,7 +46,7 @@
       <span
         class="!text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-teal-500 dark:from-violet-500 dark:to-pink-500"
         >Study</span
-      > to show thyself approved unto God
+      > to show thyself approved unto God.
     </h1>
     <h4 style="color: #485163; margin-bottom: 1.75rem">
       Observations and study notes from the F260 Bible reading plan. <br /><br />
