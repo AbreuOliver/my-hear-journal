@@ -23,20 +23,23 @@
   if (dayOfWeekName == 'Friday') {
     readingStatus = 'Finished reading '
   } if (dayOfWeekName == 'Saturday') {
-    readingStatus = 'Started reading '
+    readingStatus = 'Started reading'
   } else {
     readingStatus = 'Currently reading '
   }
   let currentReadingWeek = ''
   if (dayOfWeekName == 'Saturday') {
-    currentReadingWeek = result;
+    currentReadingWeek = {result};
   } else {
-    currentReadingWeek = result-1;
+    currentReadingWeek = `${result - 1}`;
   }
 
   console.log("Week Number:", `${result - 1}`);
+
   console.log("Reading Status:", readingStatus);
+
   console.log("Current Plan Week:", currentReadingWeek);
+
 </script>
 
 <script>
