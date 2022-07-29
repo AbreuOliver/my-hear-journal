@@ -14,15 +14,15 @@
   let numberOfDays = Math.floor((currentdate - oneJan) / (24 * 60 * 60 * 1000));
   let result = Math.ceil((currentdate.getDay() + 1 + numberOfDays) / 7);
 
-  let dayOfWeekDigit = new Date().getDay();
-  console.log(dayOfWeekDigit) // 👉️ 0
+  const dayOfWeekDigit = new Date().getDay();
+  console.log("Day of Week Digit: ", dayOfWeekDigit) // 👉️ 0
 
   let dayOfWeekName = new Date().toLocaleString('default', { weekday: 'long' })
   console.log('Day of Week Name:', dayOfWeekName)
   let readingStatus = ''
-  if (dayOfWeekDigit = 5) {
+  if (dayOfWeekName == 'Friday') {
     readingStatus = 'Finished reading '
-  } if (dayOfWeekDigit = 6) {
+  } else if (dayOfWeekName == 'Saturday') {
     readingStatus = 'Started reading'
   } else {
     readingStatus = 'Currently reading '
