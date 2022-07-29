@@ -20,9 +20,9 @@
   let dayOfWeekName = new Date().toLocaleString('default', { weekday: 'long' })
   console.log('Day of Week Name:', dayOfWeekName)
   let readingStatus = ''
-  if (dayOfWeekName == 'Friday') {
+  if (dayOfWeekDigit == 5) {
     readingStatus = 'Finished reading '
-  } if (dayOfWeekName == 'Saturday') {
+  } if (dayOfWeekDigit == 6) {
     readingStatus = 'Started reading'
   } else {
     readingStatus = 'Currently reading '
