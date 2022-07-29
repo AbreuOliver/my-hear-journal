@@ -14,7 +14,7 @@
   let numberOfDays = Math.floor((currentdate - oneJan) / (24 * 60 * 60 * 1000));
   let result = Math.ceil((currentdate.getDay() + 1 + numberOfDays) / 7);
 
-  const dayOfWeekDigit = new Date().getDay();
+  let dayOfWeekDigit = new Date().getDay();
   console.log(dayOfWeekDigit) // 👉️ 0
 
   let dayOfWeekName = new Date().toLocaleString('default', { weekday: 'long' })
