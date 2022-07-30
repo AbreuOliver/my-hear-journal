@@ -15,30 +15,29 @@
   let result = Math.ceil((currentdate.getDay() + 1 + numberOfDays) / 7);
 
   const dayOfWeekDigit = new Date().getDay();
-  console.log("Day of Week Digit: ", dayOfWeekDigit) // 👉️ 0
+  console.log(dayOfWeekDigit) // 👉️ 0
 
   let dayOfWeekName = new Date().toLocaleString('default', { weekday: 'long' })
   console.log('Day of Week Name:', dayOfWeekName)
   let readingStatus = ''
   if (dayOfWeekName == 'Friday') {
     readingStatus = 'Finished reading '
-  } else if (dayOfWeekName == 'Saturday') {
+  } if (dayOfWeekName == 'Saturday') {
     readingStatus = 'Started reading'
   } else {
     readingStatus = 'Currently reading '
   }
   let currentReadingWeek = ''
   if (dayOfWeekName == 'Saturday') {
-    currentReadingWeek = {result};
+    currentReadingWeek = result;
   } else {
-    currentReadingWeek = `${result - 1}`;
+    currentReadingWeek = result - 1;
   }
-
   console.log("Week Number:", `${result - 1}`);
 
   console.log("Reading Status:", readingStatus);
 
-  console.log("Current Plan Week:", currentReadingWeek);
+  console.log("Current Plan Week:", currentReadingWeek); 
 
 </script>
 
