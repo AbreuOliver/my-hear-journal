@@ -1,43 +1,79 @@
 <script context="module">
-  export const prerender = true
+export const prerender = true
 
-  export const load = async ({ fetch }) => {
-    return {
-      props: {
-        recentPosts: await fetch('/posts.json?limit=4').then((res) => res.json())
-      }
+export const load = async ({ fetch }) => {
+  return {
+    props: {
+      recentPosts: await fetch('/posts.json?limit=4').then((res) => res.json())
     }
   }
+}
 
-  let currentdate = new Date();
-  let oneJan = new Date(currentdate.getFullYear(), 0, 1);
-  let numberOfDays = Math.floor((currentdate - oneJan) / (24 * 60 * 60 * 1000));
-  let result = Math.ceil((currentdate.getDay() + 1 + numberOfDays) / 7);
+let currentdate = new Date();
+let oneJan = new Date(currentdate.getFullYear(), 0, 1);
+let numberOfDays = Math.floor((currentdate - oneJan) / (24 * 60 * 60 * 1000));
+let result = Math.ceil((currentdate.getDay() + 1 + numberOfDays) / 7);
 
-  const dayOfWeekDigit = new Date().getDay();
-  console.log(dayOfWeekDigit) // 👉️ 0
+const dayOfWeekDigit = new Date().getDay();
+console.log(dayOfWeekDigit) // 👉️ 0
 
-  let dayOfWeekName = new Date().toLocaleString('default', { weekday: 'long' })
-  console.log('Day of Week Name:', dayOfWeekName)
-  let readingStatus = ''
-  if (dayOfWeekName == 'Friday') {
-    readingStatus = 'Finished reading '
-  } if (dayOfWeekName == 'Saturday') {
-    readingStatus = 'Started reading'
-  } else {
-    readingStatus = 'Currently reading '
+let dayOfWeekName = new Date().toLocaleString('default', { weekday: 'long' })
+console.log('Day of Week Name:', dayOfWeekName)
+let readingStatus = ''
+if (dayOfWeekName == 'Friday') {
+  readingStatus = 'Finished reading '
+} if (dayOfWeekName == 'Saturday') {
+  readingStatus = 'Started reading'
+} else {
+  readingStatus = 'Currently reading '
+}
+let currentReadingWeek = ''
+if (dayOfWeekName == 'Saturday') {
+  currentReadingWeek = result;
+} else {
+  currentReadingWeek = result - 1;
+}
+console.log("Week Number:", `${result - 1}`);
+
+console.log("Reading Status:", readingStatus);
+
+console.log("Current Plan Week:", currentReadingWeek); 
+
+let readingPlan = [
+  { week: 31,
+    plan: [
+      "Luke 1",
+      "Luke 2",
+      "Matthew 1 & Matthew 2",
+      "Mark 1",
+      "John 1",
+    ], 
+    memoryVerses: [
+      "John 1:1-2",
+      "John 1:14"
+    ]
+  },
+  { week: 32,
+    plan: [
+      "Matthew 3 & Matthew 4",
+      "Matthew 5",
+      "Matthew 6",
+      "Matthew 7",
+      "Matthew 3",
+    ],
+    memoryVerses: [
+      "Matthew 5:16",
+      "Matthew 6:33"
+    ]
   }
-  let currentReadingWeek = ''
-  if (dayOfWeekName == 'Saturday') {
-    currentReadingWeek = result;
-  } else {
-    currentReadingWeek = result - 1;
-  }
-  console.log("Week Number:", `${result - 1}`);
+]
 
-  console.log("Reading Status:", readingStatus);
+var readingPlanResult = readingPlan.find(e => e.week === currentReadingWeek + 2);
 
-  console.log("Current Plan Week:", currentReadingWeek); 
+let memoryVerseResult = readingPlanResult.memoryVerses;
+
+console.log("This weeks' reading plan is: ", readingPlanResult.plan);
+console.log("This weeks' memory verses are: ", memoryVerseResult);
 
 </script>
 
