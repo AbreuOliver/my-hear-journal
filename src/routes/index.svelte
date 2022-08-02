@@ -109,8 +109,8 @@ console.log("This weeks' memory verses are: ", memoryVerseResult);
         ></strong
       >.
     </h4>
-    {#each readingPlanResult.plan as plan}
-      <h4>Day {plan.id + 1}: {plan}</h4>
+    {#each readingPlanResult.plan as plan, index}
+      <h4>Day {index + 1}: {plan}</h4>
     {/each}
     <ButtonLink
       size="large"
