@@ -109,6 +109,9 @@ console.log("This weeks' memory verses are: ", memoryVerseResult);
         ></strong
       >.
     </h4>
+    {#each readingPlanResult.plan as plan}
+      <h4 style="color: red">{plan} </h4> <br/>
+    {/each}
     <ButtonLink
       size="large"
       target="_blank"
