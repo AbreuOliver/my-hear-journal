@@ -112,7 +112,7 @@ console.log("This weeks' memory verses are: ", memoryVerseResult);
     {#each readingPlanResult.plan as plan, index}
       <h4><span style="color: #485163;">Day {index + 1}:</span> {plan}</h4>
     {/each}
-    </ br>
+    <br style="margin-bottom: 1rem;" />
     <ButtonLink
       size="large"
       target="_blank"
