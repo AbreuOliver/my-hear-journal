@@ -44,7 +44,7 @@ let readingPlan = [
     plan: [
       "Luke 1",
       "Luke 2",
-      "Matthew 1 & Matthew 2",
+      "Matthew 1 + Matthew 2",
       "Mark 1",
       "John 1",
     ], 
@@ -55,7 +55,7 @@ let readingPlan = [
   },
   { week: 32,
     plan: [
-      "Matthew 3 & Matthew 4",
+      "Matthew 3 + Matthew 4",
       "Matthew 5",
       "Matthew 6",
       "Matthew 7",
@@ -110,7 +110,7 @@ console.log("This weeks' memory verses are: ", memoryVerseResult);
       >.
     </h4>
     {#each readingPlanResult.plan as plan}
-      <h4 style="color: red">{plan} </h4> <br/>
+      <h4>Day {plan.id + 1}: {plan}</h4>
     {/each}
     <ButtonLink
       size="large"
