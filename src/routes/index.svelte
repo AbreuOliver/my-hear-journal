@@ -1,5 +1,5 @@
 <script context="module">
-import readingPlan from '../../static/f260PlanDetails.json';
+import * as readingPlan from '../../static/plan.json';
 
 export const prerender = true
 
