@@ -1,4 +1,6 @@
 <script context="module">
+import readingPlan from '../../static/f260PlanDetails.json';
+
 export const prerender = true
 
 export const load = async ({ fetch }) => {
@@ -39,34 +41,34 @@ console.log("Reading Status:", readingStatus);
 
 console.log("Current Plan Week:", currentReadingWeek); 
 
-let readingPlan = [
-  { week: 31,
-    plan: [
-      "Luke 1",
-      "Luke 2",
-      "Matthew 1 + Matthew 2",
-      "Mark 1",
-      "John 1",
-    ], 
-    memoryVerses: [
-      "John 1:1-2",
-      "John 1:14"
-    ]
-  },
-  { week: 32,
-    plan: [
-      "Matthew 3 + Matthew 4",
-      "Matthew 5",
-      "Matthew 6",
-      "Matthew 7",
-      "Matthew 3",
-    ],
-    memoryVerses: [
-      "Matthew 5:16",
-      "Matthew 6:33"
-    ]
-  }
-]
+// let readingPlan = [
+//   { week: 31,
+//     plan: [
+//       "Luke 1",
+//       "Luke 2",
+//       "Matthew 1 + Matthew 2",
+//       "Mark 1",
+//       "John 1",
+//     ], 
+//     memoryVerses: [
+//       "John 1:1-2",
+//       "John 1:14"
+//     ]
+//   },
+//   { week: 32,
+//     plan: [
+//       "Matthew 3 + Matthew 4",
+//       "Matthew 5",
+//       "Matthew 6",
+//       "Matthew 7",
+//       "Matthew 3",
+//     ],
+//     memoryVerses: [
+//       "Matthew 5:16",
+//       "Matthew 6:33"
+//     ]
+//   }
+// ]
 
 var readingPlanResult = readingPlan.find(e => e.week === currentReadingWeek);
 
