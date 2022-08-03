@@ -68,7 +68,7 @@ let readingPlan = [
   }
 ]
 
-var readingPlanResult = readingPlan.find(e => e.week === currentReadingWeek + 2);
+var readingPlanResult = readingPlan.find(e => e.week === currentReadingWeek);
 
 let memoryVerseResult = readingPlanResult.memoryVerses;
 
