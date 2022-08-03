@@ -17,7 +17,7 @@
   let currentWeekNumberOfTheYear = Math.ceil((currentdate.getDay() + 1 + numberOfDays) / 7);
   let dayOfWeekName = new Date().toLocaleString('default', { weekday: 'long' })
 
-  console.log('Day of Week Name:', dayOfWeekName)
+  // console.log('Day of Week Name:', dayOfWeekName)
 
   let readingStatus = ''
 
@@ -47,8 +47,8 @@
 
   let memoryVerseResult = readingPlanResult.memoryVerses;
 
-  console.log("This weeks' reading plan is: ", readingPlanResult.plan);
-  console.log("This weeks' memory verses are: ", memoryVerseResult);
+  // console.log("This weeks' reading plan is: ", readingPlanResult.plan);
+  // console.log("This weeks' memory verses are: ", memoryVerseResult);
 
 </script>
 
@@ -86,7 +86,14 @@
     </h4>
     <div style="margin-left: 1rem; margin-top: -2.15rem; margin-bottom: -2.5rem;">
       {#each readingPlanResult.plan as plan, index}
-        <h4 style="font-family: monospace;"><span style="color: #485163;">Day {index + 1}:</span> {plan}</h4>
+        <h4 style="font-family: monospace;">
+          {#if prefersLight}
+            <span class="text-slate-500">Day {index + 1}:</span>
+          {:else}
+            <span class="text-slate-400">Day {index + 1}:</span>
+          {/if}
+            {plan}
+        </h4>
       {/each}
       <br style="margin-bottom: 1rem;" />
     </div>
@@ -94,7 +101,14 @@
       <strong style="color: #485163;">Memory Verses:</strong> <br /></h4>
     <div style="margin-left: 1rem; margin-top: -2.15rem; ">
       {#each readingPlanResult.memoryVerses as reference, index}
-        <h4 style="font-family: monospace;"><span style="color: #485163;">Reference {index + 1}:</span> {reference}</h4>
+      <h4 style="font-family: monospace;">
+        {#if prefersLight}
+          <span class="text-slate-500">Reference {index + 1}:</span>
+        {:else}
+          <span class="text-slate-400">Reference {index + 1}:</span>
+        {/if}
+          {reference}
+      </h4>
       {/each}
       <br style="margin-bottom: 1rem;" />
     </div>
