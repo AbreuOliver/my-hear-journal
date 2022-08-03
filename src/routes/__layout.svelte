@@ -11,12 +11,18 @@
 </script>
 
 <div class="flex flex-col min-h-screen">
-  <div class="mx-auto flex flex-col flex-grow w-full max-w-4xl" style="color: white; max-width: 60ch">
+  <div class="mx-auto flex flex-col flex-grow w-full max-w-4xl" style="max-width: 60ch">
       <div class="nav flex h-18 px-5 py-4 justify-between items-center">
-        <h2 style="color: #677489">
-          <a class="text-lg sm:text-2xl font-bold" href="/">
-            {name}
-          </a>
+        <h2>
+          {#if prefersLight}
+            <a class="text-slate-500 text-lg sm:text-2xl font-bold" href="/">
+              {name}
+            </a>
+          {:else}
+            <a class="text-slate-400 text-lg sm:text-2xl font-bold" href="/">
+              {name}
+            </a>
+          {/if}
         </h2>
         {#if browser}
           <button
@@ -53,9 +59,22 @@
 </div>
 
 <style>
-  @media only screen and (max-device-width: 768px) and (orientation: portrait)  {
+  @media (prefers-color-scheme: dark) {
     .nav {
-      background-color: #000;
+      background-color: rgba(0, 0, 0, 0.2) !important;
+    }
+  }
+  @media (prefers-color-scheme: light) {
+    .nav {
+      background-color: rgba(255, 255, 255, 0.2) !important;
+    }
+  }
+
+  @media only screen and (max-device-width: 767px) and (orientation: portrait)  {
+    .nav {
+      backdrop-filter: blur(5px) !important;
+      position: sticky; top: 0 !important;
+      z-index: 999;
     }
   }
 </style>

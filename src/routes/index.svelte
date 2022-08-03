@@ -11,6 +11,8 @@
     }
   }
 
+  let prefersLight = browser ? Boolean(JSON.parse(localStorage.getItem('prefersLight'))) : false
+
   let currentdate = new Date();
   let oneJan = new Date(currentdate.getFullYear(), 0, 1);
   let numberOfDays = Math.floor((currentdate - oneJan) / (24 * 60 * 60 * 1000));
