@@ -1,6 +1,6 @@
 <script context="module">
   import * as readingPlan from '../../static/plan.json';
-
+  import { browser } from '$app/env'
   export const prerender = true
 
   export const load = async ({ fetch }) => {
