@@ -14,41 +14,41 @@
   let currentdate = new Date();
   let oneJan = new Date(currentdate.getFullYear(), 0, 1);
   let numberOfDays = Math.floor((currentdate - oneJan) / (24 * 60 * 60 * 1000));
-  let result = Math.ceil((currentdate.getDay() + 1 + numberOfDays) / 7);
-
-  const dayOfWeekDigit = new Date().getDay();
-  console.log(dayOfWeekDigit) // 👉️ 0
-
+  let currentWeekNumberOfTheYear = Math.ceil((currentdate.getDay() + 1 + numberOfDays) / 7);
   let dayOfWeekName = new Date().toLocaleString('default', { weekday: 'long' })
+
   console.log('Day of Week Name:', dayOfWeekName)
+
   let readingStatus = ''
+
   if (dayOfWeekName == 'Friday') {
-    readingStatus = 'Finished reading '
-  } if (dayOfWeekName == 'Saturday') {
-    readingStatus = 'Started reading'
+    readingStatus = 'Meeting to discuss reading '
+  } else if (dayOfWeekName == 'Saturday') {
+    readingStatus = 'Started reading '
   } else {
     readingStatus = 'Currently reading '
   }
+
+
   let currentReadingWeek = ''
+
   if (dayOfWeekName == 'Saturday') {
-    currentReadingWeek = result;
+    currentReadingWeek = currentWeekNumberOfTheYear;
   } else {
-    currentReadingWeek = result - 1;
+    currentReadingWeek = currentWeekNumberOfTheYear - 1;
   }
-  console.log("Week Number:", `${result - 1}`);
 
-  console.log("Reading Status:", readingStatus);
-
-  console.log("Current Plan Week:", currentReadingWeek); 
-
-  console.log("Reading Plan", readingPlan.data)
+  // console.log("Week Number:", `${currentWeekNumberOfTheYear - 1}`);
+  // console.log("Reading Status:", readingStatus);
+  // console.log("Current Plan Week:", currentReadingWeek); 
+  // console.log("Reading Plan", readingPlan.data)
 
   let readingPlanResult = readingPlan.data.find(e => e.week === currentReadingWeek);
 
-  // let memoryVerseResult = readingPlanResult.memoryVerses;
+  let memoryVerseResult = readingPlanResult.memoryVerses;
 
   console.log("This weeks' reading plan is: ", readingPlanResult.plan);
-  // console.log("This weeks' memory verses are: ", memoryVerseResult);
+  console.log("This weeks' memory verses are: ", memoryVerseResult);
 
 </script>
 
@@ -84,37 +84,45 @@
         ></strong
       >
     </h4>
-    <div style="margin-left: 1rem; margin-top: -2.15rem;">
+    <div style="margin-left: 1rem; margin-top: -2.15rem; margin-bottom: -2.5rem;">
       {#each readingPlanResult.plan as plan, index}
         <h4 style="font-family: monospace;"><span style="color: #485163;">Day {index + 1}:</span> {plan}</h4>
       {/each}
       <br style="margin-bottom: 1rem;" />
     </div>
+    <h4 style="color: #485163; margin-bottom: 1.75rem">
+      <strong style="color: #485163;">Memory Verses:</strong> <br /></h4>
+    <div style="margin-left: 1rem; margin-top: -2.15rem; ">
+      {#each readingPlanResult.memoryVerses as reference, index}
+        <h4 style="font-family: monospace;"><span style="color: #485163;">Reference {index + 1}:</span> {reference}</h4>
+      {/each}
+      <br style="margin-bottom: 1rem;" />
+    </div>
     <ButtonLink
-      size="large"
-      target="_blank"
-      href="https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&ved=2ahUKEwjQrsCR8vv4AhUMGFkFHfrJD1QQFnoECBAQAQ&url=https%3A%2F%2Freplicate.org%2Fwp-content%2Fuploads%2F2014%2F12%2FF260-Reading-Plan-2018.pdf&usg=AOvVaw2NJGxjsgRqKjhjmO8GLzhl"
-    >
-      <slot slot="icon-start">
-        <svg
-          class="fill-white dark:fill-dark h-6 w-6"
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 24 24"
-          width="24"
-          height="24"
-          fill="none"
-          stroke="#000000"
-          stroke-width="2"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          ><path d="M14 2H6a2 2 0 0 0-2 2v16c0 1.1.9 2 2 2h12a2 2 0 0 0 2-2V8l-6-6z" /><path
-            d="M14 3v5h5M16 13H8M16 17H8M10 9H8"
-          /></svg
-        >
-      </slot>
-      View the F260 reading plan (PDF)
-      <slot slot="icon-end" />
-    </ButtonLink>
+    size="large"
+    target="_blank"
+    href="https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&ved=2ahUKEwjQrsCR8vv4AhUMGFkFHfrJD1QQFnoECBAQAQ&url=https%3A%2F%2Freplicate.org%2Fwp-content%2Fuploads%2F2014%2F12%2FF260-Reading-Plan-2018.pdf&usg=AOvVaw2NJGxjsgRqKjhjmO8GLzhl"
+  >
+    <slot slot="icon-start">
+      <svg
+        class="fill-white dark:fill-dark h-6 w-6"
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 24 24"
+        width="24"
+        height="24"
+        fill="none"
+        stroke="#000000"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        ><path d="M14 2H6a2 2 0 0 0-2 2v16c0 1.1.9 2 2 2h12a2 2 0 0 0 2-2V8l-6-6z" /><path
+          d="M14 3v5h5M16 13H8M16 17H8M10 9H8"
+        /></svg
+      >
+    </slot>
+    View the F260 reading plan (PDF)
+    <slot slot="icon-end" />
+  </ButtonLink>
   </div>
   <br style="margin-bottom: 1rem;" />
   <!-- recent posts -->
