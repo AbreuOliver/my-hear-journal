@@ -1,81 +1,54 @@
 <script context="module">
-import * as readingPlan from '../../static/plan.json';
+  import * as readingPlan from '../../static/plan.json';
 
-export const prerender = true
+  export const prerender = true
 
-export const load = async ({ fetch }) => {
-  return {
-    props: {
-      recentPosts: await fetch('/posts.json?limit=4').then((res) => res.json())
+  export const load = async ({ fetch }) => {
+    return {
+      props: {
+        recentPosts: await fetch('/posts.json?limit=4').then((res) => res.json())
+      }
     }
   }
-}
 
-let currentdate = new Date();
-let oneJan = new Date(currentdate.getFullYear(), 0, 1);
-let numberOfDays = Math.floor((currentdate - oneJan) / (24 * 60 * 60 * 1000));
-let result = Math.ceil((currentdate.getDay() + 1 + numberOfDays) / 7);
+  let currentdate = new Date();
+  let oneJan = new Date(currentdate.getFullYear(), 0, 1);
+  let numberOfDays = Math.floor((currentdate - oneJan) / (24 * 60 * 60 * 1000));
+  let result = Math.ceil((currentdate.getDay() + 1 + numberOfDays) / 7);
 
-const dayOfWeekDigit = new Date().getDay();
-console.log(dayOfWeekDigit) // 👉️ 0
+  const dayOfWeekDigit = new Date().getDay();
+  console.log(dayOfWeekDigit) // 👉️ 0
 
-let dayOfWeekName = new Date().toLocaleString('default', { weekday: 'long' })
-console.log('Day of Week Name:', dayOfWeekName)
-let readingStatus = ''
-if (dayOfWeekName == 'Friday') {
-  readingStatus = 'Finished reading '
-} if (dayOfWeekName == 'Saturday') {
-  readingStatus = 'Started reading'
-} else {
-  readingStatus = 'Currently reading '
-}
-let currentReadingWeek = ''
-if (dayOfWeekName == 'Saturday') {
-  currentReadingWeek = result;
-} else {
-  currentReadingWeek = result - 1;
-}
-console.log("Week Number:", `${result - 1}`);
+  let dayOfWeekName = new Date().toLocaleString('default', { weekday: 'long' })
+  console.log('Day of Week Name:', dayOfWeekName)
+  let readingStatus = ''
+  if (dayOfWeekName == 'Friday') {
+    readingStatus = 'Finished reading '
+  } if (dayOfWeekName == 'Saturday') {
+    readingStatus = 'Started reading'
+  } else {
+    readingStatus = 'Currently reading '
+  }
+  let currentReadingWeek = ''
+  if (dayOfWeekName == 'Saturday') {
+    currentReadingWeek = result;
+  } else {
+    currentReadingWeek = result - 1;
+  }
+  console.log("Week Number:", `${result - 1}`);
 
-console.log("Reading Status:", readingStatus);
+  console.log("Reading Status:", readingStatus);
 
-console.log("Current Plan Week:", currentReadingWeek); 
+  console.log("Current Plan Week:", currentReadingWeek); 
 
-// let readingPlan = [
-//   { week: 31,
-//     plan: [
-//       "Luke 1",
-//       "Luke 2",
-//       "Matthew 1 + Matthew 2",
-//       "Mark 1",
-//       "John 1",
-//     ], 
-//     memoryVerses: [
-//       "John 1:1-2",
-//       "John 1:14"
-//     ]
-//   },
-//   { week: 32,
-//     plan: [
-//       "Matthew 3 + Matthew 4",
-//       "Matthew 5",
-//       "Matthew 6",
-//       "Matthew 7",
-//       "Matthew 3",
-//     ],
-//     memoryVerses: [
-//       "Matthew 5:16",
-//       "Matthew 6:33"
-//     ]
-//   }
-// ]
+  console.log("Reading Plan", readingPlan.data)
 
-var readingPlanResult = readingPlan.find(e => e.week === currentReadingWeek);
+  let readingPlanResult = readingPlan.data.find(e => e.week === currentReadingWeek);
 
-let memoryVerseResult = readingPlanResult.memoryVerses;
+  // let memoryVerseResult = readingPlanResult.memoryVerses;
 
-console.log("This weeks' reading plan is: ", readingPlanResult.plan);
-console.log("This weeks' memory verses are: ", memoryVerseResult);
+  console.log("This weeks' reading plan is: ", readingPlanResult.plan);
+  // console.log("This weeks' memory verses are: ", memoryVerseResult);
 
 </script>
 
@@ -109,12 +82,14 @@ console.log("This weeks' memory verses are: ", memoryVerseResult);
           class="!text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-teal-500 dark:from-violet-500 dark:to-pink-500"
           >Week {currentReadingWeek}</span
         ></strong
-      >.
+      >
     </h4>
-    {#each readingPlanResult.plan as plan, index}
-      <h4><span style="color: #485163;">Day {index + 1}:</span> {plan}</h4>
-    {/each}
-    <br style="margin-bottom: 1rem;" />
+    <div style="margin-left: 1rem; margin-top: -2.15rem;">
+      {#each readingPlanResult.plan as plan, index}
+        <h4 style="font-family: monospace;"><span style="color: #485163;">Day {index + 1}:</span> {plan}</h4>
+      {/each}
+      <br style="margin-bottom: 1rem;" />
+    </div>
     <ButtonLink
       size="large"
       target="_blank"
