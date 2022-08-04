@@ -11,9 +11,10 @@
 </script>
 
 <div class="flex flex-col min-h-screen">
-  <div class="mx-auto flex flex-col flex-grow w-full max-w-4xl" style="max-width: 60ch">
-      <div class="nav flex h-18 px-5 py-4 justify-between items-center">
-        <h2>
+  <div class="mx-auto flex flex-col flex-grow w-full" style="position: sticky; top: 0; display: flex; flex-direction: column; justifiy-content: center; align-items: center;">
+    <div class="nav flex flex-col justify-between items-center border-b border-slate-900/15 lg:px-8 lg:border-0 dark:border-slate-300/15 lg:mx-0" style="position: sticky; top: 0; height: auto; width: 100vw;">
+      <div class="flex h-18 px-5 py-4 justify-between items-center" id="navbar">
+        <h2 style="flex-grow: 1;">
           {#if prefersLight}
             <a class="text-slate-500 text-lg sm:text-2xl font-bold" href="/">
               {name}
@@ -50,8 +51,9 @@
           </button>
         {/if}
       </div>
+      </div>
       <main
-        class="prose prose-slate prose-sm sm:prose sm:prose-slate sm:prose-lg sm:max-w-none dark:prose-invert flex flex-col w-full flex-grow py-4 px-4" style="margin-top: 0.5rem"
+        class="prose prose-slate prose-sm sm:prose sm:prose-slate sm:prose-lg sm:max-w-none dark:prose-invert flex flex-col w-full flex-grow py-4 px-4" style="margin-top: 0.5rem; max-width: 70ch;"
       > 
         <slot />
       </main>
@@ -59,22 +61,31 @@
 </div>
 
 <style>
+  .nav {
+    backdrop-filter: blur(5px) !important;
+    position: sticky; top: 0 !important;
+    z-index: 999;
+  }
+
   @media (prefers-color-scheme: dark) {
     .nav {
-      background-color: rgba(0, 0, 0, 0.2) !important;
-    }
-  }
-  @media (prefers-color-scheme: light) {
-    .nav {
-      background-color: rgba(255, 255, 255, 0.2) !important;
+      background-color: rgba(0, 0, 0, 0.8) !important;
     }
   }
 
-  @media only screen and (max-device-width: 767px) and (orientation: portrait)  {
+  @media (prefers-color-scheme: light) {
     .nav {
-      backdrop-filter: blur(5px) !important;
-      position: sticky; top: 0 !important;
-      z-index: 999;
+      background-color: rgba(255, 255, 255, 0.9) !important;
+    }
+  }
+  #navbar {
+    width: 90vw; 
+    max-width: 80ch; 
+  }
+
+  @media only screen and (max-device-width: 767px) and (orientation: portrait)  {
+    #navbar {
+      width: 100vw;
     }
   }
 </style>
