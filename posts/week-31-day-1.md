@@ -1,6 +1,6 @@
 ---
-title: Example Post for Testing
-date: 2022-07-15
+title: Preparing Onself for the Arrival of the Lord
+date: 2022-07-29
 ---
 
 <script>
@@ -33,17 +33,15 @@ Week 31 ● Day 1
 ---
 
 <!-- // HIGHLIGHT  -->
-<Highlight verseText="﻿And he shall go before him in the spirit and power of Elias, to ﻿turn the hearts of the fathers to the children, and the disobedient ﻿to the wisdom of the just; ﻿to make ready a people ﻿prepared for the Lord." reference="Luke 1:17" />
+<Highlight verseText="And he shall go before him in the spirit and power of Elias, to turn the hearts of the fathers to the children, and the disobedient to the wisdom of the just; to make ready a people prepared for the Lord." reference="Luke 1:17" />
 
 ---
 
 <!-- // EXPLANATION -->
 <Explanation 
-    passageContext="Gabriel alludes to Mal 4:5–6 to compare John the Baptist with the ot prophet Elijah.  Jesus refers to John as a type of Elijah in Matt 11:14 (see note on Matt 16:14).
-
-"
+    passageContext="Gabriel alludes to Malachi 4:5–6 to compare John the Baptist with the Old Testament prophet Elijah. Jesus refers to John as a type of Elijah in Matthew 11:14."
     citation="Barry, J. D., Mangum, D., Brown, D. R., Heiser, M. S., Custis, M., Ritzema, E., Whitehead, M. M., Grigoni, M. R., & Bomar, D. (2012, 2016). Faithlife Study Bible"
-    citationURL=""
+    citationURL="app.logos.com"
 >
     <!-- <Keyword > -->
 </Explanation>
