@@ -19,7 +19,7 @@
   let currentWeekNumberOfTheYear = Math.ceil((currentdate.getDay() + 1 + numberOfDays) / 7);
   let dayOfWeekName = new Date().toLocaleString('default', { weekday: 'long' })
 
-  // console.log('Day of Week Name:', dayOfWeekName)
+   console.log('Day of Week Name:', dayOfWeekName)
 
   let readingStatus = ''
 
@@ -40,17 +40,17 @@
     currentReadingWeek = currentWeekNumberOfTheYear - 1;
   }
 
-  // console.log("Week Number:", `${currentWeekNumberOfTheYear - 1}`);
-  // console.log("Reading Status:", readingStatus);
-  // console.log("Current Plan Week:", currentReadingWeek); 
-  // console.log("Reading Plan", readingPlan.data)
+   console.log("Week Number:", `${currentWeekNumberOfTheYear - 1}`);
+   console.log("Reading Status:", readingStatus);
+   console.log("Current Plan Week:", currentReadingWeek); 
+   console.log("Reading Plan", readingPlan.data)
 
   let readingPlanResult = readingPlan.data.find(e => e.week === currentReadingWeek);
 
   let memoryVerseResult = readingPlanResult.memoryVerses;
 
-  // console.log("This weeks' reading plan is: ", readingPlanResult.plan);
-  // console.log("This weeks' memory verses are: ", memoryVerseResult);
+   console.log("This weeks' reading plan is: ", readingPlanResult.plan);
+   console.log("This weeks' memory verses are: ", memoryVerseResult);
 
 </script>
 
