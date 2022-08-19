@@ -42,7 +42,7 @@ Week 31 ● Day 1
 <Explanation 
     passageContext="Gabriel alludes to Malachi 4:5–6 to compare John the Baptist with the Old Testament prophet Elijah. Jesus refers to John as a type of Elijah in Matthew 11:14."
     citation="Barry, J. D., Mangum, D., Brown, D. R., Heiser, M. S., Custis, M., Ritzema, E., Whitehead, M. M., Grigoni, M. R., & Bomar, D. (2012, 2016). Faithlife Study Bible"
-    citationURL="app.logos.com"
+    citationURL="https://www.app.logos.com"
 >
     <!-- <Keyword > -->
 </Explanation>
