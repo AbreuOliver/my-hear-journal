@@ -7,6 +7,7 @@ date: 2022-07-29
 	// import Gradient from '../src/lib/components/Gradient.svelte';
     // import Reference from '../src/lib/components/Reference.svelte';
     // import Intro from '../src/lib/components/Intro.svelte';
+    import Reference from '../src/lib/components/Reference.svelte';
     import Question from '../src/lib/components/Question.svelte';
     import TodayPassage from '../src/lib/components/TodayPassage.svelte';
     import Highlight from '../src/lib/components/Highlight.svelte';
