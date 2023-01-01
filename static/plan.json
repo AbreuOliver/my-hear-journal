@@ -1,6 +1,20 @@
 {
    "data": [
       {
+         "week": 1,
+         "plan":[
+            "Genesis 1 + Genesis 2",
+            "Genesis 3 + Genesis 4",
+            "Genesis 6 + Genesis 7",
+            "Genesis 8 + Genesis 9",
+            "Job 1 + Job 2"
+         ],
+         "memoryVerses":[
+            "Genesis 1:27",
+            "Hebrews 11:7"
+         ]
+      },
+      {
          "week": 31,
          "plan": [
             "Luke 1",
